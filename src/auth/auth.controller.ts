@@ -9,9 +9,9 @@ export class AuthController {
   }
 
 
-  @Post("signing")
-  signing() {
-    return this.authService.login();
+  @Post("signin")
+  signing(@Body() dto: AuthDto) {
+    return this.authService.login(dto);
   }
 
   @Post("signup")

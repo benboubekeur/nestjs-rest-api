@@ -38,8 +38,8 @@ export class AuthService {
     }
   }
 
-  login() {
-
+  login(dto: AuthDto) {
+    console.warn(dto);
     return "I have logged in ";
 
   }
