@@ -2,7 +2,8 @@
 POST http://localhost:3000/auth/signup
 Content-Type: application/x-www-form-urlencoded
 
-password=value1&email=email2022@emaom.com
+password=value1&email=email@emaom.com
+
 
 ###
 
