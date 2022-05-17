@@ -17,3 +17,13 @@ password=value1&email=email@emaom.com
 
 
 
+
+###
+
+
+GET http://localhost:3000/users/me
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer   eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoiZW1haWxAZW1hb20uY29tIiwiaWF0IjoxNjUyODEyOTc1LCJleHAiOjE2NTI4MTM4NzV9.iO_d-xw3FENsLz_xP6Ex55_Y5-8yIfTwMEQiCsu5pRo
+
+
+###
