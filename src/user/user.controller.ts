@@ -15,7 +15,6 @@ export class UserController {
 
   @Get("me")
   getMe(@GetUser() user: User) {
-    console.warn(user);
     return user;
   }
 
