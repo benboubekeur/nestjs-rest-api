@@ -5,6 +5,7 @@ import { AppModule } from "../src/app.module";
 import { AuthDto } from "../src/auth/dto";
 
 import { PrismaService } from "../src/prisma/prisma.service";
+import { EditUserDto } from "../src/user/dto";
 
 
 describe("App e2e", () => {
@@ -125,24 +126,24 @@ describe("App e2e", () => {
       });
     });
 
-    // describe('Edit user', () => {
-    //   it('should edit user', () => {
-    //     const dto: EditUserDto = {
-    //       firstName: 'Vladimir',
-    //       email: 'vlad@codewithvlad.com',
-    //     };
-    //     return pactum
-    //       .spec()
-    //       .patch('/users')
-    //       .withHeaders({
-    //         Authorization: 'Bearer $S{userAt}',
-    //       })
-    //       .withBody(dto)
-    //       .expectStatus(200)
-    //       .expectBodyContains(dto.firstName)
-    //       .expectBodyContains(dto.email);
-    //   });
-    // });
+    describe("Edit user", () => {
+      it("should edit user", () => {
+        const dto: EditUserDto = {
+          firstName: "Vladimir",
+          email: "vlad@codewithvlad.com"
+        };
+        return pactum
+          .spec()
+          .patch("/users")
+          .withHeaders({
+            Authorization: "Bearer $S{userAt}"
+          })
+          .withBody(dto)
+          .expectStatus(200)
+          .expectBodyContains(dto.firstName)
+          .expectBodyContains(dto.email);
+      });
+    });
   });
 
   // describe('Bookmarks', () => {
